@@ -1,2 +1,3 @@
-# wpd-analytics
+# CannaBiz Analytics
+
 Dispensary Analytics and Reporting
