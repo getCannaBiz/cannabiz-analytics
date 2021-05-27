@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// Current plugin version
+// Current plugin version.
 define( 'CANNABIZ_ANALYTICS_VERSION', '1.0.0' );
 
 /**

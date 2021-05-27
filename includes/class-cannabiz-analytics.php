@@ -67,8 +67,8 @@ class CannaBiz_Analytics {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'CannaBiz_Analytics_VERSION' ) ) {
-			$this->version = CannaBiz_Analytics_VERSION;
+		if ( defined( 'CANNABIZ_ANALYTICS_VERSION' ) ) {
+			$this->version = CANNABIZ_ANALYTICS_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}

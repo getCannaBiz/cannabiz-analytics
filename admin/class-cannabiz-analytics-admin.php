@@ -60,7 +60,7 @@ class CannaBiz_Analytics_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_styles() {
-		// 
+		// Admin CSS script.
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-admin.css', array(), $this->version, 'all' );
 	}
 
@@ -70,7 +70,7 @@ class CannaBiz_Analytics_Admin {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-		//
+		// Admin JS script.
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-admin.js', array( 'jquery' ), $this->version, false );
 	}
 
