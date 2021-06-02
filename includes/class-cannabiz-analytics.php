@@ -67,12 +67,11 @@ class CannaBiz_Analytics {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
+		$this->plugin_name = 'cannabiz-analytics';
+		$this->version     = '1.0.0';
 		if ( defined( 'CANNABIZ_ANALYTICS_VERSION' ) ) {
 			$this->version = CANNABIZ_ANALYTICS_VERSION;
-		} else {
-			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'cannabiz-analytics';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -115,6 +114,11 @@ class CannaBiz_Analytics {
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-cannabiz-analytics-admin.php';
+
+		/**
+		 * The file responsible for defining the admin settings page.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cannabiz-analytics-admin-settings.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
