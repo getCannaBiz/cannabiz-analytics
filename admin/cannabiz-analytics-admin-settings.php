@@ -46,20 +46,6 @@ function cannabiz_analytics_settings_page() {
 		<div class="panels">
 			<div id="panel" class="panel">
 				<div id="cannabiz-analytics-panel" class="panel-left visible">
-					<div class="block-split clearfix">
-						<div class="block-split-left">
-							<div class="titles">
-								<h2><?php esc_html_e( 'Welcome to the future of cannabis website design with WP Dispensary\'s Product Blocks for Gutenberg!', 'cannabiz-analytics' ); ?></h2>
-								<p><?php esc_html_e( 'The Dispensary Blocks collection makes it a breeze to add and style your menu. Simply search for "dispensary" or "products" in the block inserter to display Dispensary Blocks.', 'cannabiz-analytics' ); ?></p>
-							</div>
-						</div>
-						<div class="block-split-right">
-							<div class="block-theme">
-								<img src="<?php echo esc_url( plugins_url( 'images/theme.jpg', __FILE__ ) ) ?>" alt="<?php esc_html_e( 'CannaBiz Analytics', 'cannabiz-analytics' ); ?>" />
-							</div>
-						</div>
-					</div>
-
 					<div class="block-feature-wrap clear">
 						<div class="cannabiz-analytics-charts">
 

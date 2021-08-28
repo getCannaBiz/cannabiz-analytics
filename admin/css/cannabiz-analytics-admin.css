@@ -809,7 +809,7 @@ img.icon {
 }
 
 .block-feature-wrap {
-	margin: 5% 0 0 0;
+	margin: 0;
 }
 
 @media (max-width: 875px) {

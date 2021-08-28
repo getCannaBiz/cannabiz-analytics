@@ -30,12 +30,12 @@ jQuery(document).ready(function ($) {
 	new Chart(document.getElementById("bar-chart"), {
 		type: 'bar',
 		data: {
-		labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+		labels: chart_vars.vendor_names,
 		datasets: [
 			{
-			label: "Population (millions)",
-			backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7"],
-			data: [2478,5267,734,784,433]
+			label: "Vendors",
+			backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","d63638"],
+			data: chart_vars.vendor_counts
 			}
 		]
 		},
@@ -73,7 +73,7 @@ jQuery(document).ready(function ($) {
 		  datasets: [
 			{
 			  label: "Population (millions)",
-			  backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7"],
+			  backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","d63638"],
 			  data: [2478,5267,734,784,433]
 			}
 		  ]
@@ -91,17 +91,17 @@ jQuery(document).ready(function ($) {
 		type: 'doughnut',
 		data: {
 			labels: [
-				'Sativa',
+				'Indica',
 				'Hybrid',
-				'Indica'
+				'Sativa'
 			],
 			datasets: [{
-			label: 'My First Dataset',
+			label: 'Strain Types',
 			data: [300, 50, 100],
 			backgroundColor: [
 				'#74477A',
-				'#397500',
-				'#424242'
+				'#2271b1',
+				'#d63638'
 			],
 			hoverOffset: 4
 			}]
@@ -110,7 +110,7 @@ jQuery(document).ready(function ($) {
 			legend: { display: false },
 			title: {
 				display: true,
-				text: 'Predicted world population (millions) in 2050'
+				text: 'Strain Types'
 			}
 		}
 	});
