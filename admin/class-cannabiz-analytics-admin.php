@@ -62,6 +62,7 @@ class CannaBiz_Analytics_Admin {
 	public function enqueue_styles() {
 		// Admin CSS script.
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name . '-fontawesome', plugin_dir_url( __FILE__ ) . 'css/fontawesome/css/all.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -71,7 +72,8 @@ class CannaBiz_Analytics_Admin {
 	 */
 	public function enqueue_scripts() {
 		// Admin JS script.
+		wp_enqueue_script( $this->plugin_name . '-charts', 'https://cdn.jsdelivr.net/npm/chart.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-admin.js', array( 'jquery' ), $this->version, false );
-	}
+}
 
 }
