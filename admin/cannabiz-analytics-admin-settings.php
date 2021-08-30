@@ -82,11 +82,16 @@ function cannabiz_analytics_settings_page() {
                                 </div><!-- /.viewport-body -->
                             </div><!-- /.viewport-main -->
 
+                            <div class="section-title">
+                                <h2><?php _e( 'Product Counts', 'cannabiz-analytics' ); ?></h2>
+                            </div><!-- /.section-title -->
+
                             <div class="viewport-main three">
                                 <div class="viewport-top">
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Shelf Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart"></canvas>
@@ -98,6 +103,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Strain Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart-2"></canvas>
@@ -109,6 +115,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Product Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart-3"></canvas>
@@ -122,10 +129,9 @@ function cannabiz_analytics_settings_page() {
 				<div class="footer-wrap">
 					<div class="footer">
 						<div class="footer-links">
-							<a href="https://www.wpdispensary.com/"><?php esc_html_e( 'WP Dispensary', 'cannabiz-analytics' ); ?></a>
-							<a href="https://www.wpdispensary.com/blog/"><?php esc_html_e( 'Blog', 'cannabiz-analytics' ); ?></a>
-							<a href="https://www.wpdispensary.com/documentation/"><?php esc_html_e( 'Docs', 'cannabiz-analytics' ); ?></a>
-							<a href="https://twitter.com/wpdispensary"><?php esc_html_e( 'Twitter', 'cannabiz-analytics' ); ?></a>
+							<a href="https://cannabiz.pro/" target="_blank"><?php esc_html_e( 'CannaBiz Software, LLC', 'cannabiz-analytics' ); ?></a>
+							<a href="https://docs.cannabiz.pro/" target="_blank"><?php esc_html_e( 'Docs', 'cannabiz-analytics' ); ?></a>
+							<a href="https://twitter.com/gocannabiz" target="_blank"><?php esc_html_e( 'Twitter', 'cannabiz-analytics' ); ?></a>
 						</div>
 					</div>
 				</div><!-- .footer-wrap -->

@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 	// Back to top links
 	$( "#help-panel h3" ).append( $( "<a class='back-to-top' href='#panel'><i class='fa fa-angle-up'></i> Back to top</a>" ) );
 
-	// Bar chart.
+	// Vendors chart.
 	new Chart(document.getElementById("bar-chart"), {
 		type: 'bar',
 		data: {
@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
 			legend: { display: false },
 			title: {
 				display: true,
-				text: 'Predicted world population (millions) in 2050'
+				text: 'Overview of all vendors'
 			}
 		}
 	});
@@ -51,21 +51,21 @@ jQuery(document).ready(function ($) {
 	new Chart(document.getElementById("pie-chart"), {
 		type: 'pie',
 		data: {
-		  labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+		  labels: chart_vars.type_names,
 		  datasets: [{
-			label: "Population (millions)",
-			backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7"],
-			data: [2478,5267,734,784,433]
+			label: "Product Types",
+			backgroundColor: ["#74477A","d63638","#397500","#424242","#2271b1","#A7A7A7"],
+			data: chart_vars.type_counts
 		  }]
 		},
 		options: {
 		  title: {
 			display: true,
-			text: 'Predicted world population (millions) in 2050'
+			text: 'Overview of all product types'
 		  }
 		}
 	});
-	// Pie chart 2 horizontal.
+	// Pie chart 2.
 	new Chart(document.getElementById("pie-chart-2"), {
 		type: 'pie',
 		data: {
@@ -73,7 +73,7 @@ jQuery(document).ready(function ($) {
 		  datasets: [
 			{
 			  label: "Population (millions)",
-			  backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","d63638"],
+			  backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","#d63638"],
 			  data: [2478,5267,734,784,433]
 			}
 		  ]
@@ -86,87 +86,93 @@ jQuery(document).ready(function ($) {
 			}
 		}
 	});
-	// Doughnut chart horizontal.
+	// Doughnut chart 1.
 	new Chart(document.getElementById("doughnut-chart"), {
 		type: 'doughnut',
 		data: {
-			labels: [
-				'Indica',
-				'Hybrid',
-				'Sativa'
-			],
+			labels: chart_vars.shelf_names,
 			datasets: [{
-			label: 'Strain Types',
-			data: [300, 50, 100],
-			backgroundColor: [
-				'#74477A',
-				'#2271b1',
-				'#d63638'
-			],
-			hoverOffset: 4
+				label: 'Shelf Types',
+				data: chart_vars.shelf_counts,
+				backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","#d63638"],
+				hoverOffset: 4
 			}]
 		},
 		options: {
 			legend: { display: false },
 			title: {
-				display: true,
-				text: 'Strain Types'
+				display: false,
+				text: 'Overview of all shelf types'
 			}
 		}
 	});
-	// Doughnut chart horizontal.
+	// Doughnut chart 2.
 	new Chart(document.getElementById("doughnut-chart-2"), {
 		type: 'doughnut',
 		data: {
-			labels: [
-				'Sativa',
-				'Hybrid',
-				'Indica'
-			],
+			labels: chart_vars.strain_names,
 			datasets: [{
-			label: 'Something Specific',
-			data: [4000, 2600, 1200],
-			backgroundColor: [
-				'#74477A',
-				'#397500',
-				'#424242'
-			],
-			hoverOffset: 4
+				label: 'Strain Types',
+				data: chart_vars.strain_counts,
+				backgroundColor: ["#2271b1","#74477A","#d63638","#424242","#A7A7A7","#397500"],
+				hoverOffset: 4
 			}]
 		},
 		options: {
 			legend: { display: false },
 			title: {
-				display: true,
-				text: 'Predicted world population (millions) in 2050'
+				display: false,
+				text: 'Overview of all strain types'
 			}
 		}
 	});
-	// Doughnut chart horizontal.
+	// Doughnut chart 3.
 	new Chart(document.getElementById("doughnut-chart-3"), {
 		type: 'doughnut',
 		data: {
-			labels: [
-				'Sativa',
-				'Hybrid',
-				'Indica'
-			],
+			labels: chart_vars.type_names,
 			datasets: [{
-			label: 'My First Dataset',
-			data: [300, 50, 100],
-			backgroundColor: [
-				'#74477A',
-				'#397500',
-				'#424242'
-			],
-			hoverOffset: 4
+				label: 'Product types',
+				data: chart_vars.type_counts,
+				backgroundColor: ["#2271b1","#74477A","#d63638","#424242","#A7A7A7","#397500"],
+				hoverOffset: 4
 			}]
+		},
+		options: {
+			legend: {
+				position: "top",
+				align: "start",
+				display: false
+			},
+			title: {
+				display: false,
+				text: 'Overview of all product types'
+			}
+		}
+	});
+	// Product types chart.
+	new Chart(document.getElementById("product-types-chart"), {
+		type: 'bar',
+		data: {
+			labels: chart_vars.type_names,
+			datasets: [{
+				label: 'Product types',
+				data: chart_vars.type_counts,
+				backgroundColor: ["#2271b1","#74477A","#d63638","#424242","#A7A7A7","#397500"],
+				hoverOffset: 4
+			}]
+		},
+		indexAxis: 'y',
+		scales: {
+			y: {
+				beginAtZero: true
+			}
 		},
 		options: {
 			legend: { display: false },
 			title: {
-				display: true,
-				text: 'Predicted world population (millions) in 2050'
+				display: false,
+				text: 'Overview of all product types'
 			}
 		}
 	});

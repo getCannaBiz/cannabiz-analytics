@@ -1037,6 +1037,13 @@ img.icon {
     flex-basis: 31.333%;
 }
 
+@media (max-width: 768px) {
+    .viewport-main.two,
+    .viewport-main.three {
+        flex-basis: 100%;
+    }
+}
+
 .viewport-top {
     background-color: #fff;
     border-radius: 4px 4px 0 0;
@@ -1067,8 +1074,25 @@ img.icon {
     left: 42px;
 }
 
+.viewport-top span.title {
+    position: absolute;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
 .viewport-body {
     background: linear-gradient(180deg,#f7f7f7 0,#fff 19%,#fff);
     border: 0;
     padding: 15px;
+}
+
+.section-title {
+    flex-basis: 100%;
+}
+
+.section-title h2 {
+    margin: 1em 0 !important;
 }
