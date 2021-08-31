@@ -194,7 +194,6 @@ img.icon {
 }
 
 .cannabiz-analytics .panel-right {
-	display: inline-block;
 	width: 32%;
 	float: right;
 	vertical-align: top;
@@ -288,7 +287,6 @@ img.icon {
 
 .cannabiz-analytics .dispensary-logo {
 	max-width: 245px;
-	display: inline-block;
 	float: right;
 	margin-top: 2px;
 	transition: .3s ease;
@@ -458,7 +456,6 @@ img.icon {
 
 .cannabiz-analytics .theme-intro-right {
 	float: right;
-	display: inline-block;
 	margin-top: 12px;
 }
 
@@ -784,10 +781,6 @@ img.icon {
 	margin-top: 8%;
 }
 
-.cannabiz-analytics .footer p {
-
-}
-
 .footer-links a {
 	margin: 0 8px;
 	position: relative;
@@ -840,7 +833,6 @@ img.icon {
 }
 
 .block-feature {
-	display: inline-block;
 	background: #fff;
 	padding: 4% 3% 3% 3%;
 	box-shadow: 0 2px rgba(38, 30, 65, 0.1);
@@ -980,7 +972,6 @@ img.icon {
 }
 
 .panel .gutenberg-notice p {
-	margin-top: 0;
     font-size: 17px;
     color: #493c8c;
 	line-height: 1.4;
