@@ -119,10 +119,6 @@ class CannaBiz_Analytics_Admin {
 			$ptypesnames[]  = wpd_product_type_display_name( $type );
 		}
 
-		echo '<pre>';
-		var_dump( $vendor_names );
-		echo '</pre>';
-
 		// Get product count details.
 		foreach ( $details['product_counts'] as $product_id=>$count ) {
 			$pcounts[] = $count;
