@@ -26,16 +26,16 @@ jQuery(document).ready(function ($) {
 	// Back to top links
 	$( "#help-panel h3" ).append( $( "<a class='back-to-top' href='#panel'><i class='fa fa-angle-up'></i> Back to top</a>" ) );
 
-	// Vendors chart.
+	// Product sales.
 	new Chart(document.getElementById("bar-chart"), {
 		type: 'bar',
 		data: {
-		labels: chart_vars.vendor_names,
+		labels: chart_vars.product_names,
 		datasets: [
 			{
-			label: "Vendors",
+			label: "Sales by Product",
 			backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","d63638"],
-			data: chart_vars.vendor_counts
+			data: chart_vars.product_counts
 			}
 		]
 		},
@@ -43,49 +43,95 @@ jQuery(document).ready(function ($) {
 			legend: { display: false },
 			title: {
 				display: true,
-				text: 'Overview of all vendors'
+				text: 'Sales by product'
 			}
 		}
 	});
-	// Pie chart.
-	new Chart(document.getElementById("pie-chart"), {
+
+	console.log(chart_vars);
+
+	// Product type sales.
+	new Chart(document.getElementById("product-types-pie-chart"), {
 		type: 'pie',
 		data: {
-		  labels: chart_vars.type_names,
-		  datasets: [{
-			label: "Product Types",
-			backgroundColor: ["#74477A","d63638","#397500","#424242","#2271b1","#A7A7A7"],
-			data: chart_vars.type_counts
-		  }]
-		},
-		options: {
-		  title: {
-			display: true,
-			text: 'Overview of all product types'
-		  }
-		}
-	});
-	// Pie chart 2.
-	new Chart(document.getElementById("pie-chart-2"), {
-		type: 'pie',
-		data: {
-		  labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-		  datasets: [
+		labels: chart_vars.orders_product_types_names,
+		datasets: [
 			{
-			  label: "Population (millions)",
-			  backgroundColor: ["#74477A", "#397500","#424242","#2271b1","#A7A7A7","#d63638"],
-			  data: [2478,5267,734,784,433]
+			label: "Sales by Product Type",
+			backgroundColor: ["#74477A","#397500","#424242","#2271b1","#A7A7A7","d63638","#424242","#2271b1"],
+			data: chart_vars.orders_product_types_counts
 			}
-		  ]
+		]
 		},
 		options: {
 			legend: { display: false },
 			title: {
 				display: true,
-				text: 'Predicted world population (millions) in 2050'
+				text: 'Sales by Product Type'
 			}
 		}
 	});
+
+	// Strain type sales.
+	new Chart(document.getElementById("strain-sales-pie-chart"), {
+		type: 'pie',
+		data: {
+		labels: chart_vars.orders_strain_names,
+		datasets: [{
+			label: "Sales by Strain Types",
+			backgroundColor: ["#397500","#424242","#74477A","#A7A7A7","d63638","#2271b1"],
+			data: chart_vars.orders_strain_counts
+		  }]
+		},
+		options: {
+		  legend: { display: false },
+		  title: {
+			display: true,
+			text: 'Sales by Strain Types'
+		  }
+		}
+	});
+
+	// Shelf type sales.
+	new Chart(document.getElementById("shelf-sales-pie-chart"), {
+		type: 'pie',
+		data: {
+		labels: chart_vars.orders_shelf_names,
+		datasets: [{
+			label: "Sales by Shelf Types",
+			backgroundColor: ["#74477A","d63638","#397500","#424242","#2271b1","#A7A7A7"],
+			data: chart_vars.orders_shelf_counts
+		  }]
+		},
+		options: {
+		  legend: { display: false },
+		  title: {
+			display: true,
+			text: 'Sales by Shelf Types'
+		  }
+		}
+	});
+
+	// Vendors sales.
+	new Chart(document.getElementById("vendor-sales-bar-chart"), {
+		type: 'bar',
+		data: {
+		labels: chart_vars.orders_vendor_names,
+		datasets: [{
+			label: "Sales by Vendor",
+			backgroundColor: ["#424242","#2271b1","#A7A7A7","#74477A","d63638","#397500"],
+			data: chart_vars.orders_vendor_counts
+		  }]
+		},
+		options: {
+		  legend: { display: false },
+		  title: {
+			display: true,
+			text: 'Sales by Vendor'
+		  }
+		}
+	});
+
 	// Doughnut chart 1.
 	new Chart(document.getElementById("doughnut-chart"), {
 		type: 'doughnut',

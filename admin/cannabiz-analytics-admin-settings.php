@@ -49,36 +49,63 @@ function cannabiz_analytics_settings_page() {
 					<div class="block-feature-wrap clear">
 						<div class="cannabiz-analytics-charts">
 
-                            <div class="viewport-main two">
+                            <div class="viewport-main three">
                                 <div class="viewport-top">
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Strain', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
-                                    <canvas id="pie-chart"></canvas>
+                                    <canvas id="strain-sales-pie-chart"></canvas>
                                 </div><!-- /.viewport-body -->
-                            </div><!-- /.viewport-main.two -->
+                            </div><!-- /.viewport-main.three -->
 
-                            <div class="viewport-main two">
+                            <div class="viewport-main three">
                                 <div class="viewport-top">
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Shelf', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
-                                    <canvas id="pie-chart-2"></canvas>
+                                    <canvas id="shelf-sales-pie-chart"></canvas>
                                 </div><!-- /.viewport-body -->
-                            </div><!-- /.viewport-main.two -->
+                            </div><!-- /.viewport-main.three -->
+
+                            <div class="viewport-main three">
+                                <div class="viewport-top">
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Type', 'cannabiz-analytics' ); ?></span>
+                                </div><!-- /.viewport-top -->
+                                <div class="viewport-body">
+                                    <canvas id="product-types-pie-chart"></canvas>
+                                </div><!-- /.viewport-body -->
+                            </div><!-- /.viewport-main.three -->
 
                             <div class="viewport-main">
                                 <div class="viewport-top">
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Product', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="bar-chart"></canvas>
+                                </div><!-- /.viewport-body -->
+                            </div><!-- /.viewport-main -->
+
+                            <div class="viewport-main">
+                                <div class="viewport-top">
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Vendor', 'cannabiz-analytics' ); ?></span>
+                                </div><!-- /.viewport-top -->
+                                <div class="viewport-body">
+                                    <canvas id="vendor-sales-bar-chart"></canvas>
                                 </div><!-- /.viewport-body -->
                             </div><!-- /.viewport-main -->
 
