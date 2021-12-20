@@ -48,8 +48,6 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	console.log(chart_vars);
-
 	// Product type sales.
 	new Chart(document.getElementById("product-types-pie-chart"), {
 		type: 'pie',
@@ -128,6 +126,46 @@ jQuery(document).ready(function ($) {
 		  title: {
 			display: true,
 			text: 'Sales by Vendor'
+		  }
+		}
+	});
+
+	// Sales count by customer.
+	new Chart(document.getElementById("customer-sales-bar-chart"), {
+		type: 'bar',
+		data: {
+		labels: chart_vars.orders_customer_names,
+		datasets: [{
+			label: "Sales by Customer",
+			backgroundColor: ["#424242","#2271b1","#A7A7A7","#74477A","d63638","#397500"],
+			data: chart_vars.orders_customer_counts
+		  }]
+		},
+		options: {
+		  legend: { display: false },
+		  title: {
+			display: false,
+			text: 'Sales by Customer'
+		  }
+		}
+	});
+
+	// Sales total by customer.
+	new Chart(document.getElementById("customer-sales-total-bar-chart"), {
+		type: 'bar',
+		data: {
+		labels: chart_vars.orders_customer_names,
+		datasets: [{
+			label: "Sales Total by Customer",
+			backgroundColor: ["#424242","#2271b1","#A7A7A7","#74477A","d63638","#397500"],
+			data: chart_vars.orders_customer_sales_totals
+		  }]
+		},
+		options: {
+		  legend: { display: false },
+		  title: {
+			display: false,
+			text: 'Sales Total by Customer'
 		  }
 		}
 	});

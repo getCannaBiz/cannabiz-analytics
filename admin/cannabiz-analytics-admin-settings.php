@@ -109,6 +109,30 @@ function cannabiz_analytics_settings_page() {
                                 </div><!-- /.viewport-body -->
                             </div><!-- /.viewport-main -->
 
+                            <div class="viewport-main">
+                                <div class="viewport-top">
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales by Customer', 'cannabiz-analytics' ); ?></span>
+                                </div><!-- /.viewport-top -->
+                                <div class="viewport-body">
+                                    <canvas id="customer-sales-bar-chart"></canvas>
+                                </div><!-- /.viewport-body -->
+                            </div><!-- /.viewport-main -->
+
+                            <div class="viewport-main">
+                                <div class="viewport-top">
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <div class="viewport-top-dot"></div>
+                                    <span class="title"><?php _e( 'Sales Total by Customer', 'cannabiz-analytics' ); ?></span>
+                                </div><!-- /.viewport-top -->
+                                <div class="viewport-body">
+                                    <canvas id="customer-sales-total-bar-chart"></canvas>
+                                </div><!-- /.viewport-body -->
+                            </div><!-- /.viewport-main -->
+
                             <div class="section-title">
                                 <h2><?php _e( 'Product Counts', 'cannabiz-analytics' ); ?></h2>
                             </div><!-- /.section-title -->

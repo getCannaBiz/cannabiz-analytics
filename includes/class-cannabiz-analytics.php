@@ -116,6 +116,11 @@ class CannaBiz_Analytics {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-cannabiz-analytics-admin.php';
 
 		/**
+		 * The file responsible for defining the helper functions.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/cannabiz-analytics-helper-functions.php';
+
+		/**
 		 * The file responsible for defining the admin settings page.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/cannabiz-analytics-admin-settings.php';

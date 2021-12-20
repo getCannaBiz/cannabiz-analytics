@@ -119,6 +119,20 @@ class CannaBiz_Analytics_Admin {
 			$ptypesnames[]  = wpd_product_type_display_name( $type );
 		}
 
+		// Get customer counts.
+		$customer_counts = array_count_values( $details['orders_customers'] );
+
+		// Get order customer count details.
+		foreach ( $customer_counts as $customer=>$count ) {
+			$customer_count[]  = $count;
+			$customer_names[]  = cannabiz_get_display_name( $customer ) . ' (ID: ' . $customer . ')';
+			$customer_pcount[] = $details['order_items']['count'];
+		}
+		// Get order customer total sales details.
+		foreach ( $details['orders_customers_sales'] as $total ) {
+			$customer_totals[] = $total;
+		}
+
 		// Get product count details.
 		foreach ( $details['product_counts'] as $product_id=>$count ) {
 			$pcounts[] = $count;
@@ -132,24 +146,29 @@ class CannaBiz_Analytics_Admin {
 		wp_enqueue_script( $this->plugin_name . '-charts', plugin_dir_url( __FILE__ ) . 'js/chart.js', array( 'jquery' ), $this->version, false );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-admin.js', array( 'jquery' ), $this->version, false );
 		wp_localize_script( $this->plugin_name, 'chart_vars', array(
-			'product_names'        => $pnames,
-			'product_counts'       => $pcounts,
-			'orders_strain_names'  => $strain_names,
-			'orders_strain_counts' => $strain_counts,
-			'orders_shelf_names'   => $shelf_names,
-			'orders_shelf_counts'  => $shelf_counts,
-			'orders_vendor_names'  => $vendor_names,
-			'orders_vendor_counts' => $vendor_counts,
-			'orders_product_types_names'  => $ptypesnames,
-			'orders_product_types_counts' => $ptypescounts,
-			'vendor_names'         => get_wpd_vendors_details( 'names' ),
-			'vendor_counts'        => get_wpd_vendors_details( 'counts' ),
-			'strain_names'         => get_wpd_strain_types_details( 'names' ),
-			'strain_counts'        => get_wpd_strain_types_details( 'counts' ),
-			'shelf_names'          => get_wpd_shelf_types_details( 'names' ),
-			'shelf_counts'         => get_wpd_shelf_types_details( 'counts' ),
-			'type_names'           => get_wpd_product_types_details( 'names' ),
-			'type_counts'          => get_wpd_product_types_details( 'counts' ),
+			// Order sales details.
+			'orders_strain_names'          => $strain_names,
+			'orders_strain_counts'         => $strain_counts,
+			'orders_shelf_names'           => $shelf_names,
+			'orders_shelf_counts'          => $shelf_counts,
+			'orders_vendor_names'          => $vendor_names,
+			'orders_vendor_counts'         => $vendor_counts,
+			'orders_product_types_names'   => $ptypesnames,
+			'orders_product_types_counts'  => $ptypescounts,
+			'orders_customer_names'        => $customer_names,
+			'orders_customer_counts'       => $customer_count,
+			'orders_customer_sales_totals' => $customer_totals,
+			// General order details.
+			'product_names'  => $pnames,
+			'product_counts' => $pcounts,
+			'vendor_names'   => get_wpd_vendors_details( 'names' ),
+			'vendor_counts'  => get_wpd_vendors_details( 'counts' ),
+			'strain_names'   => get_wpd_strain_types_details( 'names' ),
+			'strain_counts'  => get_wpd_strain_types_details( 'counts' ),
+			'shelf_names'    => get_wpd_shelf_types_details( 'names' ),
+			'shelf_counts'   => get_wpd_shelf_types_details( 'counts' ),
+			'type_names'     => get_wpd_product_types_details( 'names' ),
+			'type_counts'    => get_wpd_product_types_details( 'counts' ),
 		) );
 	}
 
