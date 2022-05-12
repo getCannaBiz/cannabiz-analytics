@@ -12,7 +12,7 @@
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+	wp_die();
 }
 
 /**
@@ -26,5 +26,5 @@ function cannabiz_get_display_name( $user_id ) {
 		return false;
 	}
 	// Return the display name.
-	return $user->data->display_name;
+	return esc_html( $user->data->display_name );
 }
