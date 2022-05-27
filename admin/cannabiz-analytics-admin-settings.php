@@ -2,28 +2,29 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://cannabiz.pro
- * @since      1.0.0
- *
  * @package    CannaBiz_Analytics
  * @subpackage CannaBiz_Analytics/admin
+ * @author     CannaBiz Software <contact@cannabiz.pro>
+ * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://cannabiz.pro
+ * @since      1.0.0
  */
 
 /**
  * Adds a menu item for the Analytics page.
  *
- * since 1.0.0
+ * @since 1.0.0
  */
 function cannabiz_analytics_settings_page_menu() {
 
-	add_submenu_page(
-		'wpd-settings',
-		__( 'CannaBiz Analytics', 'cannabiz-analytics' ),
-		__( 'Analytics', 'cannabiz-analytics' ),
-		'manage_options',
-		'analytics',
-		'cannabiz_analytics_settings_page'
-	);
+    add_submenu_page(
+        'wpd-settings',
+        __( 'CannaBiz Analytics', 'cannabiz-analytics' ),
+        __( 'Analytics', 'cannabiz-analytics' ),
+        'manage_options',
+        'analytics',
+        'cannabiz_analytics_settings_page'
+    );
 
 }
 add_action( 'admin_menu', 'cannabiz_analytics_settings_page_menu', 99 );
@@ -31,23 +32,23 @@ add_action( 'admin_menu', 'cannabiz_analytics_settings_page_menu', 99 );
 /**
  * Outputs the markup used on the Getting Started
  *
- * since 1.0.0
+ * @since 1.0.0
  */
 function cannabiz_analytics_settings_page() {
 ?>
-	<div class="wrap cannabiz-analytics">
-		<div class="intro-wrap">
-			<div class="intro">
-				<a href="<?php echo esc_url( 'https://cannabiz.pro/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'images/logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit CannaBiz', 'cannabiz-analytics' ); ?>" /></a>
-				<h3><?php printf( esc_html__( 'Getting started with', 'cannabiz-analytics' ) ); ?> <strong><?php printf( esc_html__( 'CannaBiz Analytics', 'cannabiz-analytics' ) ); ?></strong></h3>
-			</div>
-		</div>
+    <div class="wrap cannabiz-analytics">
+        <div class="intro-wrap">
+            <div class="intro">
+                <a href="<?php echo esc_url( 'https://cannabiz.pro/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'images/logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit CannaBiz', 'cannabiz-analytics' ); ?>" /></a>
+                <h3><?php printf( esc_html__( 'Getting started with', 'cannabiz-analytics' ) ); ?> <strong><?php printf( esc_html__( 'CannaBiz Analytics', 'cannabiz-analytics' ) ); ?></strong></h3>
+            </div>
+        </div>
 
-		<div class="panels">
-			<div id="panel" class="panel">
-				<div id="cannabiz-analytics-panel" class="panel-left visible">
-					<div class="block-feature-wrap clear">
-						<div class="cannabiz-analytics-charts">
+        <div class="panels">
+            <div id="panel" class="panel">
+                <div id="cannabiz-analytics-panel" class="panel-left visible">
+                    <div class="block-feature-wrap clear">
+                        <div class="cannabiz-analytics-charts">
 
                             <div class="viewport-main three">
                                 <div class="viewport-top">
@@ -173,21 +174,21 @@ function cannabiz_analytics_settings_page() {
                                 </div><!-- /.viewport-body -->
                             </div><!-- /.viewport-main.three -->
 
-						</div><!-- .cannabiz-analytics-charts -->
-					</div><!-- .block-feature-wrap -->
-				</div><!-- .panel-left -->
+                        </div><!-- .cannabiz-analytics-charts -->
+                    </div><!-- .block-feature-wrap -->
+                </div><!-- .panel-left -->
 
-				<div class="footer-wrap">
-					<div class="footer">
-						<div class="footer-links">
-							<a href="https://cannabiz.pro/" target="_blank"><?php esc_html_e( 'CannaBiz Software, LLC', 'cannabiz-analytics' ); ?></a>
-							<a href="https://docs.cannabiz.pro/" target="_blank"><?php esc_html_e( 'Docs', 'cannabiz-analytics' ); ?></a>
-							<a href="https://twitter.com/gocannabiz" target="_blank"><?php esc_html_e( 'Twitter', 'cannabiz-analytics' ); ?></a>
-						</div>
-					</div>
-				</div><!-- .footer-wrap -->
-			</div><!-- .panel -->
-		</div><!-- .panels -->
-	</div><!-- .cannabiz-analytics -->
-<?php
+                <div class="footer-wrap">
+                    <div class="footer">
+                        <div class="footer-links">
+                            <a href="https://cannabiz.pro/" target="_blank"><?php esc_html_e( 'CannaBiz Software, LLC', 'cannabiz-analytics' ); ?></a>
+                            <a href="https://docs.cannabiz.pro/" target="_blank"><?php esc_html_e( 'Docs', 'cannabiz-analytics' ); ?></a>
+                            <a href="https://twitter.com/gocannabiz" target="_blank"><?php esc_html_e( 'Twitter', 'cannabiz-analytics' ); ?></a>
+                        </div>
+                    </div>
+                </div><!-- .footer-wrap -->
+            </div><!-- .panel -->
+        </div><!-- .panels -->
+    </div><!-- .cannabiz-analytics -->
+    <?php
 }

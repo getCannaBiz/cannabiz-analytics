@@ -3,11 +3,12 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://cannabiz.pro
- * @since      1.0.0
- *
  * @package    CannaBiz_Analytics
  * @subpackage CannaBiz_Analytics/public
+ * @author     CannaBiz Software <contact@cannabiz.pro>
+ * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://cannabiz.pro
+ * @since      1.0.0
  */
 
 /**
@@ -18,64 +19,71 @@
  *
  * @package    CannaBiz_Analytics
  * @subpackage CannaBiz_Analytics/public
- * @author     CannaBiz <hello@cannabiz.pro>
+ * @author     CannaBiz Software <contact@cannabiz.pro>
+ * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
+ * @link       https://cannabiz.pro
+ * @since      1.0.0
  */
 class CannaBiz_Analytics_Public {
 
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
+    /**
+     * The ID of this plugin.
+     *
+     * @since  1.0.0
+     * @access private
+     * @var    string    $_plugin_name    The ID of this plugin.
+     */
+    private $_plugin_name;
 
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
+    /**
+     * The version of this plugin.
+     *
+     * @since  1.0.0
+     * @access private
+     * @var    string    $_version    The current version of this plugin.
+     */
+    private $_version;
 
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct( $plugin_name, $version ) {
+    /**
+     * Initialize the class and set its properties.
+     *
+     * @param string $_plugin_name The name of the plugin.
+     * @param string $_version     The version of this plugin.
+     * 
+     * @since  1.0.0
+     * @return void
+     */
+    public function __construct( $_plugin_name, $_version ) {
 
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+        $this->plugin_name = $_plugin_name;
+        $this->version = $_version;
 
-	}
+    }
 
-	/**
-	 * Register the stylesheets for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+    /**
+     * Register the stylesheets for the public-facing side of the site.
+     *
+     * @since  1.0.0
+     * @return void
+     */
+    public function enqueue_styles() {
 
-		// General public CSS styles.
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-public.css', array(), $this->version, 'all' );
+        // General public CSS styles.
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-public.css', array(), $this->version, 'all' );
 
-	}
+    }
 
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
+    /**
+     * Register the JavaScript for the public-facing side of the site.
+     *
+     * @since  1.0.0
+     * @return void
+     */
+    public function enqueue_scripts() {
 
-		// General public JS script.
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-public.js', array( 'jquery' ), $this->version, false );
+        // General public JS script.
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-public.js', array( 'jquery' ), $this->version, false );
 
-	}
+    }
 
 }
