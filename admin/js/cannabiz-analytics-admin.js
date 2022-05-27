@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 
-	// Tabs
+	// Tabs.
 	$( ".inline-list" ).each( function() {
 		$( this ).find( "li" ).each( function(i) {
 			$( this).click( function(){
@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
 	} );
 
 
-	// Scroll to anchor
+	// Scroll to anchor.
 	$( ".anchor-nav a, .toc a" ).click( function(e) {
 		e.preventDefault();
 
@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
 	} );
 
 
-	// Back to top links
+	// Back to top links.
 	$( "#help-panel h3" ).append( $( "<a class='back-to-top' href='#panel'><i class='fa fa-angle-up'></i> Back to top</a>" ) );
 
 	// Product sales.

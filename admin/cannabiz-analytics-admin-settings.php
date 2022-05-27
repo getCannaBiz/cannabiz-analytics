@@ -32,10 +32,11 @@ add_action( 'admin_menu', 'cannabiz_analytics_settings_page_menu', 99 );
 /**
  * Outputs the markup used on the Getting Started
  *
- * @since 1.0.0
+ * @since  1.0.0
+ * @return void
  */
 function cannabiz_analytics_settings_page() {
-?>
+    ?>
     <div class="wrap cannabiz-analytics">
         <div class="intro-wrap">
             <div class="intro">
@@ -55,7 +56,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Strain', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Strain', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="strain-sales-pie-chart"></canvas>
@@ -67,7 +68,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Shelf', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Shelf', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="shelf-sales-pie-chart"></canvas>
@@ -79,7 +80,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Type', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Type', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="product-types-pie-chart"></canvas>
@@ -91,7 +92,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Product', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Product', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="bar-chart"></canvas>
@@ -103,7 +104,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Vendor', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Vendor', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="vendor-sales-bar-chart"></canvas>
@@ -115,7 +116,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales by Customer', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales by Customer', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="customer-sales-bar-chart"></canvas>
@@ -127,7 +128,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Sales Total by Customer', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Sales Total by Customer', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="customer-sales-total-bar-chart"></canvas>
@@ -135,7 +136,7 @@ function cannabiz_analytics_settings_page() {
                             </div><!-- /.viewport-main -->
 
                             <div class="section-title">
-                                <h2><?php _e( 'Product Counts', 'cannabiz-analytics' ); ?></h2>
+                                <h2><?php esc_attr_e( 'Product Counts', 'cannabiz-analytics' ); ?></h2>
                             </div><!-- /.section-title -->
 
                             <div class="viewport-main three">
@@ -143,7 +144,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Shelf Types', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Shelf Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart"></canvas>
@@ -155,7 +156,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Strain Types', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Strain Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart-2"></canvas>
@@ -167,7 +168,7 @@ function cannabiz_analytics_settings_page() {
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
                                     <div class="viewport-top-dot"></div>
-                                    <span class="title"><?php _e( 'Product Types', 'cannabiz-analytics' ); ?></span>
+                                    <span class="title"><?php esc_attr_e( 'Product Types', 'cannabiz-analytics' ); ?></span>
                                 </div><!-- /.viewport-top -->
                                 <div class="viewport-body">
                                     <canvas id="doughnut-chart-3"></canvas>
