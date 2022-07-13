@@ -19,8 +19,8 @@ function cannabiz_analytics_settings_page_menu() {
 
     add_submenu_page(
         'wpd-settings',
-        __( 'CannaBiz Analytics', 'cannabiz-analytics' ),
-        __( 'Analytics', 'cannabiz-analytics' ),
+        esc_attr__( 'CannaBiz Analytics', 'cannabiz-analytics' ),
+        esc_attr__( 'Analytics', 'cannabiz-analytics' ),
         'manage_options',
         'analytics',
         'cannabiz_analytics_settings_page'
@@ -41,7 +41,7 @@ function cannabiz_analytics_settings_page() {
         <div class="intro-wrap">
             <div class="intro">
                 <a href="<?php echo esc_url( 'https://cannabiz.pro/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'images/logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit CannaBiz', 'cannabiz-analytics' ); ?>" /></a>
-                <h3><?php printf( esc_html__( 'Getting started with', 'cannabiz-analytics' ) ); ?> <strong><?php printf( esc_html__( 'CannaBiz Analytics', 'cannabiz-analytics' ) ); ?></strong></h3>
+                <h3><?php printf( esc_html__( 'CannaBiz', 'cannabiz-analytics' ) ); ?> <strong><?php printf( esc_html__( 'Analytics', 'cannabiz-analytics' ) ); ?></strong></h3>
             </div>
         </div>
 
