@@ -133,7 +133,6 @@ class CannaBiz_Analytics_Admin {
         foreach ( $customer_counts as $customer=>$count ) {
             $customer_count[]  = $count;
             $customer_names[]  = cannabiz_get_display_name( $customer ) . ' (ID: ' . $customer . ')';
-            $customer_pcount[] = $details['order_items']['count'];
         }
         // Get order customer total sales details.
         foreach ( $details['orders_customers_sales'] as $total ) {
