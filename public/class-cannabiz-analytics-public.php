@@ -69,7 +69,7 @@ class CannaBiz_Analytics_Public {
     public function enqueue_styles() {
 
         // General public CSS styles.
-        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-public.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-public.css', [], $this->version, 'all' );
 
     }
 
@@ -82,7 +82,7 @@ class CannaBiz_Analytics_Public {
     public function enqueue_scripts() {
 
         // General public JS script.
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-public.js', array( 'jquery' ), $this->version, false );
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-public.js', [ 'jquery' ], $this->version, false );
 
     }
 

@@ -67,8 +67,8 @@ class CannaBiz_Analytics_Admin {
      */
     public function enqueue_styles() {
         // Admin CSS script.
-        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-admin.css', array(), $this->version, 'all' );
-        wp_enqueue_style( $this->plugin_name . '-fontawesome', plugin_dir_url( __FILE__ ) . 'css/fontawesome/css/all.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/cannabiz-analytics-admin.css', [], $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name . '-fontawesome', plugin_dir_url( __FILE__ ) . 'css/fontawesome/css/all.css', [], $this->version, 'all' );
     }
 
     /**
@@ -79,16 +79,16 @@ class CannaBiz_Analytics_Admin {
      */
     public function enqueue_scripts() {
         $details       = wpd_ecommerce_get_orders_details();
-        $pcounts       = array();
-        $pnames        = array();
-        $ptypes_counts = array();
-        $ptypes_names  = array();
-        $strain_counts = array();
-        $strain_names  = array();
-        $shelf_counts  = array();
-        $shelf_names   = array();
-        $vendor_counts = array();
-        $vendor_names  = array();
+        $pcounts       = [];
+        $pnames        = [];
+        $ptypes_counts = [];
+        $ptypes_names  = [];
+        $strain_counts = [];
+        $strain_names  = [];
+        $shelf_counts  = [];
+        $shelf_names   = [];
+        $vendor_counts = [];
+        $vendor_names  = [];
 
         // Strain Types.
         foreach ( $details['strain_types'] as $key=>$val ) {
@@ -149,9 +149,9 @@ class CannaBiz_Analytics_Admin {
 //        $pnames  = array_slice( $pnames, 0, 10 );
 
         // Admin JS script.
-        wp_enqueue_script( $this->plugin_name . '-charts', plugin_dir_url( __FILE__ ) . 'js/chart.js', array( 'jquery' ), $this->version, false );
-        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-admin.js', array( 'jquery' ), $this->version, false );
-        wp_localize_script( $this->plugin_name, 'chart_vars', array(
+        wp_enqueue_script( $this->plugin_name . '-charts', plugin_dir_url( __FILE__ ) . 'js/chart.js', [ 'jquery' ], $this->version, false );
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/cannabiz-analytics-admin.js', [ 'jquery' ], $this->version, false );
+        wp_localize_script( $this->plugin_name, 'chart_vars', [
             // Order sales details.
             'orders_strain_names'          => $strain_names,
             'orders_strain_counts'         => $strain_counts,
@@ -175,7 +175,7 @@ class CannaBiz_Analytics_Admin {
             'shelf_counts'   => get_wpd_shelf_types_details( 'counts' ),
             'type_names'     => get_wpd_product_types_details( 'names' ),
             'type_counts'    => get_wpd_product_types_details( 'counts' ),
-        ) );
+        ] );
     }
 
 }
