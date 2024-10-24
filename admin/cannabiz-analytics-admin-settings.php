@@ -6,7 +6,7 @@
  * @subpackage CannaBiz_Analytics/admin
  * @author     CannaBiz Software <contact@cannabiz.pro>
  * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
- * @link       https://cannabiz.pro
+ * @link       https://cannabizsoftware.com
  * @since      1.0.0
  */
 
@@ -40,7 +40,7 @@ function cannabiz_analytics_settings_page() {
     <div class="wrap cannabiz-analytics">
         <div class="intro-wrap">
             <div class="intro">
-                <a href="<?php echo esc_url( 'https://cannabiz.pro/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'images/logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit CannaBiz', 'cannabiz-analytics' ); ?>" /></a>
+                <a href="<?php echo esc_url( 'https://cannabizsoftware.com/' ); ?>"><img class="dispensary-logo" src="<?php echo esc_url( plugins_url( 'images/logo.png', __FILE__ ) ); ?>" alt="<?php esc_html_e( 'Visit CannaBiz', 'cannabiz-analytics' ); ?>" /></a>
                 <h3><?php printf( esc_html__( 'CannaBiz', 'cannabiz-analytics' ) ); ?> <strong><?php printf( esc_html__( 'Analytics', 'cannabiz-analytics' ) ); ?></strong></h3>
             </div>
         </div>
@@ -182,7 +182,7 @@ function cannabiz_analytics_settings_page() {
                 <div class="footer-wrap">
                     <div class="footer">
                         <div class="footer-links">
-                            <a href="https://cannabiz.pro/" target="_blank"><?php esc_html_e( 'CannaBiz Software, LLC', 'cannabiz-analytics' ); ?></a>
+                            <a href="https://cannabizsoftware.com/" target="_blank"><?php esc_html_e( 'CannaBiz Software, LLC', 'cannabiz-analytics' ); ?></a>
                             <a href="https://docs.cannabiz.pro/" target="_blank"><?php esc_html_e( 'Docs', 'cannabiz-analytics' ); ?></a>
                             <a href="https://twitter.com/gocannabiz" target="_blank"><?php esc_html_e( 'Twitter', 'cannabiz-analytics' ); ?></a>
                         </div>

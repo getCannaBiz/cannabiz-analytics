@@ -30,7 +30,7 @@ msgid "CannaBiz Analytics"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://cannabiz.pro/features/dispensary-analytics/"
+msgid "https://cannabizsoftware.com/features/dispensary-analytics/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -42,5 +42,5 @@ msgid "CannaBiz"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://cannabiz.pro"
+msgid "https://cannabizsoftware.com"
 msgstr ""

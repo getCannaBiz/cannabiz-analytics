@@ -7,7 +7,7 @@
  * @subpackage CannaBiz_Analytics/includes
  * @author     CannaBiz Software <contact@cannabiz.pro>
  * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
- * @link       https://cannabiz.pro
+ * @link       https://cannabizsoftware.com
  * @since      1.0.0
  */
 
@@ -20,7 +20,7 @@
  * @subpackage CannaBiz_Analytics/includes
  * @author     CannaBiz Software <contact@cannabiz.pro>
  * @license    GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
- * @link       https://cannabiz.pro
+ * @link       https://cannabizsoftware.com
  * @since      1.0.0
  */
 class CannaBiz_Analytics_Deactivator {

@@ -6,16 +6,16 @@
  * @package CannaBiz_Analytics
  * @author  CannaBiz Software <contact@cannabiz.pro>
  * @license GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
- * @link    https://cannabiz.pro
+ * @link    https://cannabizsoftware.com
  * @since   1.0.0
  *
  * @wordpress-plugin
  * Plugin Name:       CannaBiz Analytics
- * Plugin URI:        https://cannabiz.pro/features/dispensary-analytics/
+ * Plugin URI:        https://cannabizsoftware.com/features/dispensary-analytics/
  * Description:       Dispensary analytics and reporting
  * Version:           1.0.0
  * Author:            CannaBiz
- * Author URI:        https://cannabiz.pro
+ * Author URI:        https://cannabizsoftware.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       cannabiz-analytics
