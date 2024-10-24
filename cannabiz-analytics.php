@@ -4,7 +4,7 @@
  * The plugin bootstrap file
  *
  * @package CannaBiz_Analytics
- * @author  CannaBiz Software <contact@cannabiz.pro>
+ * @author  CannaBiz Software <support@cannabizsoftware.com>
  * @license GPL-2.0+ https://www.gnu.org/licenses/gpl-2.0.txt
  * @link    https://cannabizsoftware.com
  * @since   1.0.0
